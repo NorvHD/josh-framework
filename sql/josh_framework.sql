@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS `josh_players` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `identifier` varchar(80) NOT NULL,
+  `citizenid` varchar(20) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `birthdate` varchar(20) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `nationality` varchar(30) NOT NULL,
+  `money` longtext NOT NULL,
+  `job` varchar(50) NOT NULL DEFAULT 'unemployed',
+  `job_grade` int(11) NOT NULL DEFAULT 0,
+  `onduty` tinyint(1) NOT NULL DEFAULT 0,
+  `metadata` longtext NOT NULL,
+  `position` longtext NOT NULL,
+  `permission_group` varchar(50) NOT NULL DEFAULT 'user',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `identifier` (`identifier`),
+  UNIQUE KEY `citizenid` (`citizenid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
