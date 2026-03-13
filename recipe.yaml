@@ -12,7 +12,7 @@ description: >-
   writes a base server.cfg, and imports the framework SQL.
 
 variables:
-  frameworkRepo: https://github.com/YOUR_GITHUB_USERNAME/josh-framework
+  frameworkRepo: frameworkRepo: https://github.com/NorvHD/josh-framework
   frameworkRef: main
 
 tasks:
